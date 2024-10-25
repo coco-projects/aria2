@@ -1,1 +1,9 @@
-# aria2
+## usage
+
+see examples folder
+
+---
+
+## License
+
+MIT
