@@ -65,7 +65,10 @@ class Aria2System extends JsonRPCClient
 
     public function multicall(): array
     {
-        return $this->doRequest('multicall', [$this->calls]);
+        $result = $this->doRequest('multicall', [$this->calls]);
+        $this->calls = [];
+
+        return $result;
     }
 
     public function addUriToDownload(string $uri, ?string $saveName = null, ?string $savePath = null): static
